@@ -1,7 +1,6 @@
 const displaySpinner = error =>{
     document.getElementById('spinner').style.display = error;
 }
-
 const searchFoods = () => {
     const inputField = document.getElementById('input-field')
     const inputText = inputField.value;
@@ -25,7 +24,7 @@ const displayFoods = foods => {
     <div class="card-body">
         <h5 class="card-title">${food.strMeal}</h5>
         <p class="card-text">${food.strInstructions.slice(0, 150)}..</p>
-        <span class='category '>Category:<span class='tag-str badge rounded-pill'>${food.strCategory}</span></span>
+        <span class='category '>Category:<span class='tag-str rounded-pill'>${food.strCategory}</span></span>
         </br>
         <button href="#" class="btn details-btn btn-outline-danger mt-3 rounded-pill">See Details</button>
      </div>
