@@ -14,15 +14,31 @@
 </head>
 
 <body class="text-center ">
-    <div class="container">
+    
         <img src="images/logo/logo.png" alt="" style="max-width:250px;" class="mb-4">
         <div class="container" style="max-width:500px;">
             <!-- search area -->
             <div class="input-group">
-                <input id="input-field" type="text" class="form-control rounded-pill shadow-lg p-2 border-0"
-                    placeholder="   Search Food" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn search-btn ms-2 rounded text-white" type="button" id="button-addon2">Search</button>
+                <input id="input-field" type="text" class="form-control rounded shadow-lg p-2 border-0"
+                    placeholder="Search Food" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <!-- search button -->
+                <button onclick="searchFoods()" class="btn search-btn ms-2 rounded text-white"
+                    type="button">Search</button>
             </div>
+        </div>
+        <!-- spinner area -->
+        <div class="d-flex justify-content-center mt-5">
+            <div id="spinner" class="spinner-border text-danger mb-2" role="status">
+                <span class=""></span>
+            </div>
+            <div id="spinner-grow" class="spinner-grow  text-dark mb-4" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    <div class="container mb-5">
+        <!-- display card foods -->
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4  mt-5">
+            
         </div>
     </div>
     <!-- bootstrap bundle js cdn  -->
