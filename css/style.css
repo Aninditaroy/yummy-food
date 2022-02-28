@@ -1,4 +1,16 @@
 
+.filter-image {
+    width: 9rem;
+    height: 8rem;
+} 
+.filter-image:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s  ease-in-out;
+}
+.food-text {
+    display: block;
+    white-space: normal;
+}
 .search-btn {
     background-color: #D24027;
 }
@@ -6,6 +18,7 @@
     background-color: #D24027;
     color: white;
 }
+
 #spinner{
     display: none;
 }
@@ -14,8 +27,6 @@
 }
 .category{
     font-weight: 500;
-    padding: 5px;
-    margin: 5px;
     max-width: 100px;
     max-height: 100px;
 }
@@ -24,7 +35,8 @@
     font-weight: 400;
     font-size: 15px;
     color: white;
-    padding: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
@@ -34,13 +46,26 @@
 }
 .just-for-you-heading {
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
     color: #D24027;
 }
+.fav-cuisine-heading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #d241278f;
+}
+.filter-food-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #D24027; 
+    text-align: center;
+    padding-right: 40px;
+}
 .border-red{
     border-top: 2px solid #D24027;
-    margin-top: 5px;
     margin-left: 20px;
     margin-right: 20px;
 }

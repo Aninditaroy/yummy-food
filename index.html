@@ -14,45 +14,138 @@
 </head>
 
 <body class="">
-    
-      <div class="text-center">
-        <img src="images/logo/logo.png" alt="" style="max-width:250px;" class="mb-4">
+
+    <div class="text-center">
+        <img src="images/logo/logo.png" alt="" style="max-width:100%;" class="mb-4">
         <div class="container" style="max-width:500px;">
             <!-- search area -->
             <div class="input-group">
-                <input id="input-field" type="text" class="form-control rounded shadow-lg p-2 border-0"
+                <input id="input-field" type="text" class="form-control rounded shadow-lg p-2 border-0 icon-styling"
                     placeholder="Search Food" aria-label="Recipient's username" aria-describedby="button-addon2">
+
                 <!-- search button -->
                 <button onclick="searchFoods()" class="btn search-btn ms-2 rounded text-white"
                     type="button">Search</button>
             </div>
         </div>
-      </div>
-      <!-- display just for you food card --> 
-        <section class="container mt-5">
-            <h2 class="just-for-you-heading">Just For You</h2>
-            <div class="mb-2">  
-                <div id="display-category-foods" class="row row-cols-1 row-cols-md-3 g-4  mt-5">
-                   
+    </div>
+    <!-- different foods filter with country name -->
+    <div id="filter-food" class="container mt-4">
+        <h2 class="fav-cuisine-heading text-center mb-3">What's your favorite cuisines?</h2>
+        <div class="row">
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('American')" src="images/foods/american.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">American</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('British')" src="images/foods/british.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">British</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Spanish')" src="images/foods/spanish.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Spanish</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Thai')" src="images/foods/thai.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Thai</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Greek')" src="images/foods/chinese.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Chinese</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Greek')" src="images/foods/greek.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Greek</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Italian')" src="images/foods/italian.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Italian</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Indian')" src="images/foods/indian.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Indian</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Japanese')" src="images/foods/japanese.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Japanese</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Portuguese')" src="images/foods/portuguese.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Portuguese</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Turkish')" src="images/foods/turkish.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Turkish</p>
+                </div>
+                <div class="col-2 col-reverse">
+                    <img onclick="displayCountryFoods('Canadian')" src="images/foods/canadian.webp" alt="" class="filter-image rounded-circle">
+                    <p class="filter-food-heading">Canadian</p>
                 </div>
             </div>
-           </section>
-        <!-- spinner area -->
-        <div class="d-flex justify-content-center mt-5">
-            <span class="mb-2" id="spinner">
-                <img src="images/spinner-light-bg.gif" alt="" width="50px" height="50px">
-                <br>Loading...
-            </span>
-            <div id="spinner-grow" class="spinner-grow  text-dark mb-4" style="width: 3rem; height: 3rem;" role="status">
-                <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- display fav country food card -->
+    <section id="cuisine-section" class="container mt-5 mb-5">
+        <div class="mb-2">
+            <div id="displayFilterFood" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
             </div>
         </div>
+    </section>
+    <!-- display just for you food card -->
+    <section id="just-for-you-section" class="container mt-5">
+        <h2 class="just-for-you-heading text-uppercase">Just For You</h2>
+        <div class="mb-2">
+            <div id="display-category-foods" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+            </div>
+        </div>
+    </section>
+    <!-- spinner area -->
+    <div class="d-flex justify-content-center mt-5">
+        <span class="mb-5" id="spinner">
+            <img src="images/spinner-light-bg.gif" alt="" width="60px" height="60px">
+            <br><span class="filter-food-heading">Loading...</span>
+        </span>
+        <div id="spinner-grow" class="spinner-grow  text-dark mb-4" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>  
+    <!-- meal search result -->
     <div class="container mb-5">
         <!-- display card foods -->
         <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 mt-2">
-         
+
         </div>
     </div>
+    <!-- modal display see details food cards -->
+    <div  class="modal fade" id="food-details" tabindex="-1" aria-labelledby="food-details" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="card" id="modal-dialog-box"> 
+                    <!-- <div class="modal-header border-0">
+                        <button type="button" class="btn-close text-right" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 h-75">
+                            <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+                        </div>
+                        <div class="col-md-8 ms-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Rice Bowl</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, neque!
+                                </p>
+                                <a href="${meal.strYoutube}" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
     <!-- bootstrap bundle js cdn  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
