@@ -32,3 +32,15 @@
     max-width: 100px;
     max-height: 100px;
 }
+.just-for-you-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #D24027;
+}
+.border-red{
+    border-top: 2px solid #D24027;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

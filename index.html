@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="text-center ">
+<body class="">
     
+      <div class="text-center">
         <img src="images/logo/logo.png" alt="" style="max-width:250px;" class="mb-4">
         <div class="container" style="max-width:500px;">
             <!-- search area -->
@@ -26,19 +27,30 @@
                     type="button">Search</button>
             </div>
         </div>
+      </div>
+      <!-- display just for you food card --> 
+        <section class="container mt-5">
+            <h2 class="just-for-you-heading">Just For You</h2>
+            <div class="mb-2">  
+                <div id="display-category-foods" class="row row-cols-1 row-cols-md-3 g-4  mt-5">
+                   
+                </div>
+            </div>
+           </section>
         <!-- spinner area -->
         <div class="d-flex justify-content-center mt-5">
-            <div id="spinner" class="spinner-border text-danger mb-2" role="status">
-                <span class=""></span>
-            </div>
+            <span class="mb-2" id="spinner">
+                <img src="images/spinner-light-bg.gif" alt="" width="50px" height="50px">
+                <br>Loading...
+            </span>
             <div id="spinner-grow" class="spinner-grow  text-dark mb-4" style="width: 3rem; height: 3rem;" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
     <div class="container mb-5">
         <!-- display card foods -->
-        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4  mt-5">
-            
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+         
         </div>
     </div>
     <!-- bootstrap bundle js cdn  -->
